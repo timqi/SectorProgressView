@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SectorProgressView">
+        <attr name="bgColor" format="color"/>
+        <attr name="fgColor" format="color"/>
+        <attr name="percent" format="float"/>
+        <attr name="startAngle" format="float"/>
+    </declare-styleable>
+
+</resources>
