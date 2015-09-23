@@ -8,7 +8,7 @@ Demo
 
 ![Sample](art/sample.gif)
 
-[.APK Download]()
+[.APK Download](https://github.com/timqi/SectorProgressView/raw/master/art/SectorProgressView-V1.0-Example.apk)
 
 How to use
 ===========
