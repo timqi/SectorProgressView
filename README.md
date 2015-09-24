@@ -39,7 +39,7 @@ spv.setFgColor(0xffff765c);
 Integration
 ============
 
-－ Using gradle. Add the dependency in your app.gradle
+- Using gradle. Add the dependency in your app.gradle
 
 ```groovy
 dependencies {
