@@ -1,14 +1,14 @@
 SectorProgressView
 ==================
 
-This is a simple progress prompt or chart widget using circle and a sector.
+This is a simple progress prompt or chart widget of android using circle and a sector.
 
 Demo
 =====
 
 ![Sample](art/sample.gif)
 
-[.APK Download](https://github.com/timqi/SectorProgressView/raw/master/art/SectorProgressView-V1.0-Example.apk)
+[.apk Download](https://github.com/timqi/SectorProgressView/raw/master/art/SectorProgressView-V1.0-Example.apk)
 
 How to use
 ===========
@@ -39,7 +39,15 @@ spv.setFgColor(0xffff765c);
 Integration
 ============
 
-- Clone the repo from github. If you are using Android Studio. Select `File -> New -> Import Module` and navigate the source directory to the `library` folder is OK!
+－ Using gradle. Add the dependency in your app.gradle
+
+```groovy
+dependencies {
+    compile 'com.timqi.sectorprogressview:library:1.0.1'
+}
+```
+
+- Or you can Clone the repo from github. If you are using Android Studio. Select `File -> New -> Import Module` and navigate the source directory to the `library` folder is OK!
 
 License
 =======
