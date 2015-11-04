@@ -13,6 +13,62 @@ Demo
 How to use
 ===========
 
+## The ColorfulRingProgressView
+
+- Define views in xml
+
+```xml
+<com.timqi.sectorprogressview.ColorfulRingProgressView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/crpv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bgColor="#e1e1e1"      // The Backgroud Color of Ring
+        app:fgColorEnd="#ff4800"   // defaul color, yellow
+        app:fgColorStart="#ffe400" // defaul color, red
+        app:percent="75"           // Current percent. "100" is full
+        app:startAngle="0"         // Start Angle of the foreground sector
+        app:strokeWidth="21dp"     // Width of the Ring
+        />
+```
+
+- You can custom view using java code
+
+```java
+crpv = (ColorfulRingProgressView) findViewById(R.id.crpv);
+crpv.setPercent(75);
+crpv.setStartAngle(0);
+crpv.setBgColor(0xffe1e1e1);
+crpv.setFgColorStart(0xffffe400);
+crpv.setFgColorEnd(0xffff4800);
+crpv.setStrokeWidthDp(21);
+```
+
+## The SectorProgressView
+
+- Define views in xml
+
+```xml
+<com.timqi.sectorprogressview.SectorProgressView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spv"
+        app:bgColor="#e5e5e5"   // The Backgroud Color of Circle
+        app:fgColor="#ff765c"   // The Foregroud Color of Circle
+        app:percent="25"        // Current percent. "100" is full
+        app:startAngle="0"      // Start Angle of the foreground sector
+        />
+```
+
+- You can custom view using java code
+
+```java
+spv = (SectorProgressView) findViewById(R.id.spv);
+spv.setPercent(25);
+spv.setStartAngle(0);
+spv.setBgColor(0xffe5e5e5);
+spv.setFgColor(0xffff765c);
+```
+
 - Define views in xml
 
 ```xml

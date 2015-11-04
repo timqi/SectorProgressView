@@ -14,8 +14,6 @@ import android.view.View;
 public class SectorProgressView extends View {
     private int bgColor;
     private int fgColor;
-    private float startAngleBg, lengthAngleBg, startAngleFg, lengthAngleFg;
-
     private Paint bgPaint;
     private Paint fgPaint;
     private RectF oval;
@@ -30,21 +28,13 @@ public class SectorProgressView extends View {
             bgColor = a.getColor(R.styleable.SectorProgressView_bgColor, 0xffe5e5e5);
             fgColor = a.getColor(R.styleable.SectorProgressView_fgColor, 0xffff765c);
             percent = a.getFloat(R.styleable.SectorProgressView_percent, 0);
-            startAngle = a.getFloat(R.styleable.SectorProgressView_startAngle, 0);
-            computeArcArgs(startAngle, percent);
+            startAngle = a.getFloat(R.styleable.SectorProgressView_startAngle, 0) + 270;
 
         } finally {
             a.recycle();
         }
 
         init();
-    }
-
-    private void computeArcArgs(float startAngle, float percent) {
-        this.lengthAngleFg = percent*36/10;
-        this.lengthAngleBg = 360-lengthAngleFg;
-        this.startAngleFg = startAngle;
-        this.startAngleBg = startAngleFg +lengthAngleFg;
     }
 
     private void init() {
@@ -72,8 +62,8 @@ public class SectorProgressView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        canvas.drawArc(oval, startAngleBg, lengthAngleBg, true, bgPaint);
-        canvas.drawArc(oval, startAngleFg, lengthAngleFg, true, fgPaint);
+        canvas.drawArc(oval, 0, 360, true, bgPaint);
+        canvas.drawArc(oval, startAngle, percent*3.6f, true, fgPaint);
     }
 
     public int getBgColor() {
@@ -107,8 +97,7 @@ public class SectorProgressView extends View {
     }
 
     public void setStartAngle(float startAngle) {
-        this.startAngle = startAngle;
-        computeArcArgs(startAngle, percent);
+        this.startAngle = startAngle + 270;
         invalidate();
         requestLayout();
     }
@@ -119,7 +108,6 @@ public class SectorProgressView extends View {
 
     public void setPercent(float percent) {
         this.percent = percent;
-        computeArcArgs(startAngle, percent);
         invalidate();
         requestLayout();
     }
