@@ -80,6 +80,10 @@ spv.setFgColor(0xffff765c);
         />
 ```
 
+- parameters description
+
+![parameters description](https://github.com/timqi/SectorProgressView/raw/master/art/d.png)
+
 - You can custom view using java code
 
 ```java
