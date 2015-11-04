@@ -1,8 +1,6 @@
 SectorProgressView
 ==================
 
-This is a simple progress prompt or chart widget of android using circle and a sector.
-
 Demo
 =====
 
