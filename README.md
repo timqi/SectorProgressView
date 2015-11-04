@@ -97,7 +97,7 @@ Integration
 
 ```groovy
 dependencies {
-    compile 'com.timqi.sectorprogressview:library:1.0.1'
+    compile 'com.timqi.sectorprogressview:library:2.0.0'
 }
 ```
 
