@@ -22,8 +22,8 @@ How to use:
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:bgColor="#e1e1e1"      // The Backgroud Color of Ring
-        app:fgColorEnd="#ff4800"   // defaul color, yellow
-        app:fgColorStart="#ffe400" // defaul color, red
+        app:fgColorEnd="#ff4800"   // defaul color, red
+        app:fgColorStart="#ffe400" // defaul color, yellow
         app:percent="75"           // Current percent. "100" is full
         app:startAngle="0"         // Start Angle of the foreground sector
         app:strokeWidth="21dp"     // Width of the Ring
