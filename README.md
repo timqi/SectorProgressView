@@ -57,6 +57,10 @@ crpv.setStrokeWidthDp(21);
         />
 ```
 
+- parameters description
+
+![parameters description](https://github.com/timqi/SectorProgressView/raw/master/art/d.png)
+
 - You can custom view using java code
 
 ```java
@@ -79,10 +83,6 @@ spv.setFgColor(0xffff765c);
         app:startAngle="0"      // Start Angle of the foreground sector
         />
 ```
-
-- parameters description
-
-![parameters description](https://github.com/timqi/SectorProgressView/raw/master/art/d.png)
 
 - You can custom view using java code
 
