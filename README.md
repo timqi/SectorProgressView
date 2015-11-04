@@ -4,7 +4,7 @@ SectorProgressView
 Demo
 =====
 
-![ColorfulRingProgressView](http://7xltlk.com1.z0.glb.clouddn.com/colorfulringprogressview.demo.gif) ![SectorProgressView](http://7xltlk.com1.z0.glb.clouddn.com/sectorprogressview.demo.gif)
+![ColorfulRingProgressView](https://raw.githubusercontent.com/timqi/SectorProgressView/master/art/colorfulringprogressview.demo.gif) ![SectorProgressView](https://raw.githubusercontent.com/timqi/SectorProgressView/master/art/sectorprogressview.demo.gif)
 
 [.apk file Download](https://github.com/timqi/SectorProgressView/raw/master/art/example.apk)
 
