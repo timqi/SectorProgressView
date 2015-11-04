@@ -6,11 +6,11 @@ This is a simple progress prompt or chart widget of android using circle and a s
 Demo
 =====
 
-![Sample](art/sample.gif)
+![ColorfulRingProgressView](https://github.com/timqi/SectorProgressView/raw/master/art/colorfulringprogressview.demo.gif) ![SectorProgressView](https://github.com/timqi/SectorProgressView/raw/master/art/sectorprogressview.demo.gif)
 
-[.apk Download](https://github.com/timqi/SectorProgressView/raw/master/art/SectorProgressView-V1.0-Example.apk)
+[.apk file Download](https://github.com/timqi/SectorProgressView/raw/master/art/example.apk)
 
-How to use
+How to use:
 ===========
 
 ## The ColorfulRingProgressView
@@ -104,6 +104,13 @@ dependencies {
 ```
 
 - Or you can Clone the repo from github. If you are using Android Studio. Select `File -> New -> Import Module` and navigate the source directory to the `library` folder is OK!
+
+Author
+========
+
+- [mail](mailto://i@timqi.com)
+- [weibo](http://weibo.com/timqi)
+- [twitter](https://twitter.com/timqi_cn)
 
 License
 =======
