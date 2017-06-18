@@ -4,9 +4,9 @@ SectorProgressView
 Demo
 =====
 
-![ColorfulRingProgressView](https://raw.githubusercontent.com/timqi/SectorProgressView/master/art/colorfulringprogressview.demo.gif) ![SectorProgressView](https://raw.githubusercontent.com/timqi/SectorProgressView/master/art/sectorprogressview.demo.gif)
-
 [.apk file Download](https://github.com/timqi/SectorProgressView/raw/master/art/example.apk)
+
+![ColorfulRingProgressView](https://raw.githubusercontent.com/timqi/SectorProgressView/master/art/colorfulringprogressview.demo.gif) ![SectorProgressView](https://raw.githubusercontent.com/timqi/SectorProgressView/master/art/sectorprogressview.demo.gif)
 
 How to use:
 ===========
@@ -71,14 +71,30 @@ spv.setBgColor(0xffe5e5e5);
 spv.setFgColor(0xffff765c);
 ```
 
+## Indeterminate status
+
+This library add a API for indeterminate status of SectorProgressView and ColorfulRingProgressView. Config your angle or percent params and invoke animateIndeterminate
+
+```java
+animateIndeterminate()
+
+// if you want custom the duration or TimeInterpolator
+animateIndeterminate(int durationOneCircle, TimeInterpolator interpolator)
+
+// to stop animate
+stopAnimateIndeterminate()
+```
+
+download demo apk to have a taste.
+
 Integration
 ============
 
-- Using gradle. Add the dependency in your app.gradle
+- [ ![Download](https://api.bintray.com/packages/timqi/maven/SevctorProgressView/images/download.svg) ](https://bintray.com/timqi/maven/SevctorProgressView/_latestVersion) Using gradle. Add the dependency in your app.gradle
 
 ```groovy
 dependencies {
-    compile 'com.timqi.sectorprogressview:library:2.0.0'
+    compile 'com.timqi.sectorprogressview:library:2.0.1'
 }
 ```
 
@@ -94,7 +110,7 @@ Author
 License
 =======
 
-    Copyright 2015 Tim Qi
+    Copyright 2017 Tim Qi
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
