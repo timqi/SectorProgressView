@@ -10,9 +10,7 @@ import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
 
-/**
- * Created by qiqi on 15/11/3.
- */
+
 public class ColorfulRingProgressView extends View {
 
 

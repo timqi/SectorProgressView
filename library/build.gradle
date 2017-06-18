@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.0'
+        classpath 'com.android.tools.build:gradle:2.3.2'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
     }
@@ -13,14 +13,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.0.1"
+version = "2.0.1"
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 26
+    buildToolsVersion "26"
 
     defaultConfig {
         minSdkVersion 8
-        targetSdkVersion 23
+        targetSdkVersion 26
         versionCode 1
         versionName version
     }
@@ -39,14 +39,11 @@ group = "com.timqi.sectorprogressview"
 
 install {
     repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
         pom {
             project {
                 packaging 'aar'
-                // Add your description here
-                name 'a simple progress prompt or chart widget using circle and a sector'  //项目描述
+                name 'a simple progress prompt or chart widget using circle and a sector'
                 url siteUrl
-                // Set your license
                 licenses {
                     license {
                         name 'The Apache Software License, Version 2.0'
@@ -55,7 +52,7 @@ install {
                 }
                 developers {
                     developer {
-                        id 'timqi'       //填写开发者基本信息
+                        id 'timqi'
                         name 'Tim Qi'
                         email 'timqi.cn@gmail.com'
                     }
@@ -93,8 +90,8 @@ bintray {
     key = properties.getProperty("bintray.apikey")
     configurations = ['archives']
     pkg {
-        repo = "maven"  //发布到Bintray的那个仓库里，默认账户有四个库，我们这里上传到maven库
-        name = "SevctorProgressView"  //发布到Bintray上的项目名字
+        repo = "maven"
+        name = "SevctorProgressView"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

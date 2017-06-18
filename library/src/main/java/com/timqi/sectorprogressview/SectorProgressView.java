@@ -8,9 +8,7 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
-/**
- * Created by qiqi on 15/9/17.
- */
+
 public class SectorProgressView extends View {
     private int bgColor;
     private int fgColor;
