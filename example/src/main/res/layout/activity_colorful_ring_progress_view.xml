@@ -105,6 +105,16 @@
             android:progress="21" />
     </LinearLayout>
 
+    <android.support.v7.widget.AppCompatButton
+      android:id="@+id/animator"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@id/llStrokeWidth"
+      android:layout_marginBottom="20dp"
+      android:textAllCaps="false"
+      android:text="animateIndeterminate"
+      />
+
     <TextView
         android:id="@+id/tvTip"
         android:layout_width="wrap_content"

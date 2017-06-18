@@ -1,5 +1,8 @@
 package com.timqi.sectorprogressview;
 
+import android.animation.ObjectAnimator;
+import android.animation.TimeInterpolator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -7,6 +10,7 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 
 public class SectorProgressView extends View {
@@ -15,6 +19,8 @@ public class SectorProgressView extends View {
     private Paint bgPaint;
     private Paint fgPaint;
     private RectF oval;
+
+    private ObjectAnimator animator;
 
     public SectorProgressView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -112,4 +118,24 @@ public class SectorProgressView extends View {
 
     private float startAngle;
 
+    public void animateIndeterminate() {
+        animateIndeterminate(800, new AccelerateDecelerateInterpolator());
+    }
+
+    public void animateIndeterminate(int durationOneCircle,
+                                     TimeInterpolator interpolator) {
+        animator = ObjectAnimator.ofFloat(this, "startAngle", getStartAngle(), getStartAngle() + 360);
+        if (interpolator != null) animator.setInterpolator(interpolator);
+        animator.setDuration(durationOneCircle);
+        animator.setRepeatCount(ValueAnimator.INFINITE);
+        animator.setRepeatMode(ValueAnimator.RESTART);
+        animator.start();
+    }
+
+    public void stopAnimateIndeterminate() {
+        if (animator != null) {
+            animator.cancel();
+            animator = null;
+        }
+    }
 }

@@ -3,7 +3,9 @@ package com.timqi.sectorprogressview.example;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -21,6 +23,8 @@ public class ColorfulRingProgressViewAty extends AppCompatActivity {
     TextView tvTip;
     ColorfulRingProgressView crpv;
     TextView tvPercent;
+
+    AppCompatButton btnAnimate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,24 @@ public class ColorfulRingProgressViewAty extends AppCompatActivity {
             }
         });
         showTip();
+
+        btnAnimate = (AppCompatButton) findViewById(R.id.animator);
+        btnAnimate.setTag(false);
+        btnAnimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean animating = (boolean) view.getTag();
+                if (animating) {
+                    crpv.stopAnimateIndeterminate();
+                    btnAnimate.setTag(false);
+                    btnAnimate.setText("animateIndeterminate");
+                } else {
+                    crpv.animateIndeterminate();
+                    btnAnimate.setTag(true);
+                    btnAnimate.setText("stopAnimateIndeterminate");
+                }
+            }
+        });
     }
 
     private SeekBar.OnSeekBarChangeListener onSeekBarChangeListener

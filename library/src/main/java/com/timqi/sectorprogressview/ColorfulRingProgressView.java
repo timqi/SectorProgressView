@@ -1,5 +1,8 @@
 package com.timqi.sectorprogressview;
 
+import android.animation.ObjectAnimator;
+import android.animation.TimeInterpolator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -9,6 +12,7 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 
 public class ColorfulRingProgressView extends View {
@@ -26,6 +30,7 @@ public class ColorfulRingProgressView extends View {
     private RectF mOval;
     private Paint mPaint;
 
+    private ObjectAnimator animator;
 
     public ColorfulRingProgressView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -43,7 +48,6 @@ public class ColorfulRingProgressView extends View {
             mPercent = a.getFloat(R.styleable.ColorfulRingProgressView_percent, 75);
             mStartAngle = a.getFloat(R.styleable.ColorfulRingProgressView_startAngle, 0)+270;
             mStrokeWidth = a.getDimensionPixelSize(R.styleable.ColorfulRingProgressView_strokeWidth, dp2px(21));
-            System.out.println("**** m"+mStrokeWidth);
         } finally {
             a.recycle();
         }
@@ -155,5 +159,26 @@ public class ColorfulRingProgressView extends View {
     public void setStartAngle(float mStartAngle) {
         this.mStartAngle = mStartAngle + 270;
         refreshTheLayout();
+    }
+
+    public void animateIndeterminate() {
+        animateIndeterminate(800, new AccelerateDecelerateInterpolator());
+    }
+
+    public void animateIndeterminate(int durationOneCircle,
+                                     TimeInterpolator interpolator) {
+        animator = ObjectAnimator.ofFloat(this, "startAngle", getStartAngle(), getStartAngle() + 360);
+        if (interpolator != null) animator.setInterpolator(interpolator);
+        animator.setDuration(durationOneCircle);
+        animator.setRepeatCount(ValueAnimator.INFINITE);
+        animator.setRepeatMode(ValueAnimator.RESTART);
+        animator.start();
+    }
+
+    public void stopAnimateIndeterminate() {
+        if (animator != null) {
+            animator.cancel();
+            animator = null;
+        }
     }
 }

@@ -2,6 +2,8 @@ package com.timqi.sectorprogressview.example;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -16,6 +18,8 @@ public class SectorProgressViewAty extends AppCompatActivity {
     private SeekBar sbStartAngle;
     private TextView tvTip;
 
+    AppCompatButton btnAnimate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +33,24 @@ public class SectorProgressViewAty extends AppCompatActivity {
         sbPercent.setOnSeekBarChangeListener(onSeekBarChangeListener);
         sbStartAngle.setOnSeekBarChangeListener(onSeekBarChangeListener);
         showTip();
+
+        btnAnimate = (AppCompatButton) findViewById(R.id.animator);
+        btnAnimate.setTag(false);
+        btnAnimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean animating = (boolean) view.getTag();
+                if (animating) {
+                    spv.stopAnimateIndeterminate();
+                    btnAnimate.setTag(false);
+                    btnAnimate.setText("animateIndeterminate");
+                } else {
+                    spv.animateIndeterminate();
+                    btnAnimate.setTag(true);
+                    btnAnimate.setText("stopAnimateIndeterminate");
+                }
+            }
+        });
     }
 
     private void showTip() {
