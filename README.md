@@ -1,6 +1,8 @@
 SectorProgressView
 ==================
 
+[ ![Download](https://api.bintray.com/packages/timqi/maven/SevctorProgressView/images/download.svg) ](https://bintray.com/timqi/maven/SevctorProgressView/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SectorProgressView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5904)
+
 Demo
 =====
 
@@ -90,7 +92,7 @@ download demo apk to have a taste.
 Integration
 ============
 
-- [ ![Download](https://api.bintray.com/packages/timqi/maven/SevctorProgressView/images/download.svg) ](https://bintray.com/timqi/maven/SevctorProgressView/_latestVersion) Using gradle. Add the dependency in your app.gradle
+- Using gradle. Add the dependency in your app.gradle
 
 ```groovy
 dependencies {
