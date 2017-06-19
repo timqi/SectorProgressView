@@ -1,7 +1,8 @@
 SectorProgressView
 ==================
 
-[ ![Download](https://api.bintray.com/packages/timqi/maven/SevctorProgressView/images/download.svg) ](https://bintray.com/timqi/maven/SevctorProgressView/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SectorProgressView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5904)
+<a href="http://www.methodscount.com/?lib=com.timqi.sectorprogressview%3Alibrary%3A2.0.1"><img src="https://img.shields.io/badge/Methods and size-82 | 8 KB-e91e63.svg"/></a>
+ [ ![Download](https://api.bintray.com/packages/timqi/maven/SevctorProgressView/images/download.svg) ](https://bintray.com/timqi/maven/SevctorProgressView/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SectorProgressView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5904)
 
 Demo
 =====
