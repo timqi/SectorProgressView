@@ -76,6 +76,7 @@ public class SectorProgressView extends View {
 
     public void setBgColor(int bgColor) {
         this.bgColor = bgColor;
+        bgPaint.setColor(bgColor);
         refreshTheLayout();
     }
 
@@ -85,6 +86,7 @@ public class SectorProgressView extends View {
 
     public void setFgColor(int fgColor) {
         this.fgColor = fgColor;
+        fgPaint.setColor(fgColor);
         refreshTheLayout();
     }
 
